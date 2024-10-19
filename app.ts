@@ -1,10 +1,12 @@
+require('dotenv').config();
 import express from 'express';
 import mongoose from 'mongoose';
 const router = require("./src/routes/index.ts");
 const cors = require("cors");
 
+
 const app = express();
-const PORT = 5000;
+const PORT = process.env.APP_PORT;
 
 const corsOptions = {
     origin: "http://localhost:3000",
@@ -18,7 +20,7 @@ app.use(express.json());
 
 
 mongoose
-    .connect('mongodb://localhost:27017/taskboard')
+    .connect(process.env.MONGODB_URI as string)
     .then(() => console.log('MongoDB connected'))
     .catch((error) => console.log(error));
 

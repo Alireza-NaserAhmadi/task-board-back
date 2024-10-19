@@ -19,7 +19,6 @@ This is an Express.js application that uses MongoDB as its database. The applica
 
 ## Getting Started
 
-
 ### Prerequisites
 
 - Node.js (v14 or higher)
@@ -28,15 +27,32 @@ This is an Express.js application that uses MongoDB as its database. The applica
 
 ### Installation
 
+1. **Install dependencies**:
 
-1. Install the package :
 npm i
 # or
-yarn 
+yarn
 
-2. Create a database named taskboard in MongoDB
-mongo
-use taskboard
+2. **Ensure MongoDB is running**:
+   Make sure MongoDB is running on your local machine. By default, MongoDB runs on `localhost:27017`.
 
-3. Start the server:
+   - You can start MongoDB locally by running the following command:
+
+     **On Linux/macOS**:
+
+     ```bash
+     sudo systemctl start mongod
+     ```
+
+     **On Windows**:
+
+     - Open the MongoDB shell using:
+       ```bash
+       mongod
+       ```
+
+3. **Run the project**:
+
+```bash
 npm run dev
+```
